@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Stream Quality Checker",
+  "version": "1.0",
+  "description": "Detect video streaming quality like 1080p, 720p and more.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Stream Quality Checker"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
